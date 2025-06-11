@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MITS - Micro Information Technology Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+     <div class="logo-container">
+      <img src="Screenshot 2025-06-11 151645.png" alt="MITS Logo" class="nav-logo" />
+      <h1 class="logo-text">MITS</h1>
+    </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section id="home" class="banner">
+    <h2>Welcome to Micro Information Technology Services (MITS)</h2>
+    <p>Empowering students through learning and internships</p>
+  </section>
+
+  <!-- Mission -->
+  <section class="mission">
+    <h3>Our Mission</h3>
+    <p>
+      At MITS, we bridge the gap between academics and industry by offering hands-on project learning,
+      tutorials, and real internship experiences for students from top universities.
+    </p>
+  </section>
+
+  <!-- Tutorials -->
+  <section id="tutorials" class="content-section">
+    <h3>Tutorials</h3>
+    <p>Explore tutorials in Java, Python, C++, and more. Learn with interactive code editors, video walkthroughs, and track your progress as you go!</p>
+    <ul>
+      <li>✔️ Java Basics - Variables, Loops, OOP</li>
+      <li>✔️ Python for Data Science - NumPy, Pandas</li>
+      <li>✔️ Web Development - HTML, CSS, JavaScript</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="content-section">
+    <h3>Projects</h3>
+    <p>Project categories: Beginner, Intermediate, Advanced</p>
+    <ul>
+      <li><strong>Frontend:</strong> Landing Page, Sidebar Menu</li>
+      <li><strong>Backend:</strong> API for Internship Applications, Certificate Verification</li>
+      <li><strong>AI:</strong> FAQ Chatbot, Domain Recommendation System</li>
+      <li><strong>ML:</strong> Engagement Analysis, Success Prediction</li>
+    </ul>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="content-section">
+    <h3>About Us</h3>
+    <p>
+      Micro Information Technology Services (MITS) is a student-focused organization collaborating with over
+      150+ universities to provide industry-ready training and internship programs.
+    </p>
+  </section>
+
+  <!-- Partner Universities -->
+  <section class="universities">
+    <h3>Partner Universities</h3>
+    <div class="university-logos">
+      <img src="pic/Chicago-University-Logo.png" alt="Harvard University" loading="lazy" class="hover-logo" />
+      <img src="pic/Stanford-University-Logo.jpg" alt="Stanford University" loading="lazy" class="hover-logo" />
+      <img src="pic/755b29164f171cfe7392b5a653a4c61a.jpg" alt="University of Toronto" loading="lazy" class="hover-logo" />
+      <img src="pic/MIT-lockup-3line-red.png" alt="MIT" loading="lazy" class="hover-logo" />
+      <img src="pic/images.jpeg" alt="Yale University" loading="lazy" class="hover-logo" />
+      <img src="pic/cam.png" alt="University of Cambridge" loading="lazy" class="hover-logo" />
+      <img src="pic/oxford-university-logo_quad.jpg" alt="University of Oxford" loading="lazy" class="hover-logo" />
+      <img src="pic/columbia-university-logo-2F21GAD.jpg" alt="Columbia University" loading="lazy" class="hover-logo" />
+      <img src="pic/princeton.png" alt="Princeton University" loading="lazy" class="hover-logo" />
+      <img src="pic/Seal_of_the_California_Institute_of_Technology.svg.png" alt="Caltech" loading="lazy" class="hover-logo" />
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats">
+    <h3>Our Impact</h3>
+    <div class="stat-boxes">
+      <div class="stat">🌐 150+ Universities</div>
+      <div class="stat">👩‍🎓 10,000+ Students</div>
+      <div class="stat">📱 25K+ Followers</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="content-section footer">
+    <h3>Contact Us</h3>
+    <p>Email: info@mits.org</p>
+    <p>Phone: +91-9876543210</p>
+    <p>Address: Haryana, India</p>
+    <p>&copy; 2025 MITS. All rights reserved.</p>
+  </section>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn" title="Back to top">⬆️</button>
+
+  <!-- JavaScript -->
+  <script>
+    // Scroll to top functionality
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      scrollBtn.style.display = (window.scrollY > 200) ? "block" : "none";
+    };
+    scrollBtn.onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // Animate section fade-in
+    const sections = document.querySelectorAll("section");
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      section.classList.add("hidden");
+      observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>

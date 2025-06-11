@@ -1,0 +1,252 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Scroll Reveal */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-in-out;
+}
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #0059ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0059ff;
+}
+
+/* Section */
+section {
+  padding: 3em 2em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(to right, #0059ff, #4d94ff);
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.banner h2 {
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+}
+
+.banner p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Mission */
+.mission {
+  background-color: #fff;
+  border-left: 8px solid #0059ff;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 89, 255, 0.05);
+  padding: 2em;
+}
+
+/* Tutorials */
+#tutorials {
+  background-color: #fdf6ec;
+}
+
+#tutorials ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5em;
+}
+
+#tutorials li {
+  background: #fff3cd;
+  margin: 10px auto;
+  padding: 0.7em 1.2em;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(255, 194, 51, 0.2);
+}
+
+/* Projects */
+#projects {
+  background-color: #eaf4f4;
+}
+
+#projects ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5em;
+}
+
+#projects li {
+  background: #d9f3f3;
+  margin: 10px auto;
+  padding: 0.7em 1.2em;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 153, 153, 0.2);
+}
+
+/* About */
+#about {
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: auto;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #444;
+  border-left: 6px solid #333;
+  padding: 2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Universities */
+.universities {
+  background: #f0f4ff;
+}
+
+.university-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.university-logos img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  background-color: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 89, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.hover-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Stats */
+.stats {
+  background: linear-gradient(to right, #f7f7f7, #e0e0e0);
+}
+
+.stat-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-top: 1em;
+}
+
+.stat {
+  background: #0059ff;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 12px;
+  font-size: 1.2em;
+  min-width: 220px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact / Footer */
+.footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 2em;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  font-size: 18px;
+  border: none;
+  background-color: #0059ff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#scrollTopBtn:hover {
+  background-color: #0047cc;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo Image */
+.nav-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Logo Text */
+.logo-text {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #0059ff;
+  margin: 0;
+}
